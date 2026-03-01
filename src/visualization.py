@@ -41,3 +41,32 @@ def create_circuit_map(telemetry_data, color_by='Speed'):
 
     return fig
 
+
+
+def add_driver_position(telemetry_data, current_position, color_by='Speed'):
+
+    ##Base Circuit Map
+    fig = create_circuit_map(telemetry_data, color_by)
+
+    current_x_position = telemetry_data['X'].values[current_position]
+    current_y_position = telemetry_data['Y'].values[current_position]
+
+    fig.add_trace(go.Scatter(
+        x=[current_x_position],
+        y=[current_y_position],
+        mode='markers',
+        marker=dict(
+            size=15,
+            color='white',
+            symbol='circle',
+            line=dict(color = 'black', width = 2),
+        ),
+            name='driver position',
+            showlegend=False
+    ))
+
+    return fig
+
+
+    
+
