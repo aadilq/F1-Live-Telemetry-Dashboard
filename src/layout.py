@@ -167,6 +167,7 @@ def create_layout():
             ),
             dcc.Store(id='telemetry-store'),
             dcc.Store(id='playback-state', data={'playing': False}),
+            dcc.Interval(id='init-interval', n_intervals=0, max_intervals=1, interval=500),
         ]
     )
 

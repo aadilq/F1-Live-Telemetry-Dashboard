@@ -22,11 +22,11 @@ def get_lap_telemetry(lap):
     telemetry = lap.get_telemetry()
     return telemetry
 
-session = get_session(year=2023, event='Monza', session_type='Q')
-fastest_lap = get_fast_lap(session=session, driverNumber='1')
-telemetry = get_lap_telemetry(fastest_lap)
-print(telemetry.head())
-print(telemetry.columns)
+# session = get_session(year=2023, event='Monza', session_type='Q')
+# fastest_lap = get_fast_lap(session=session, driverNumber='1')
+# telemetry = get_lap_telemetry(fastest_lap)
+# print(telemetry.head())
+# print(telemetry.columns)
 
 
 

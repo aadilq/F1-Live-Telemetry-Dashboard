@@ -1,9 +1,5 @@
-import fastf1
-
 import plotly.graph_objects as go
 import pandas as pd
-
-from data_loader import get_session, get_fast_lap, get_lap_telemetry
 
 
 def create_circuit_map(telemetry_data, color_by='Speed'):
